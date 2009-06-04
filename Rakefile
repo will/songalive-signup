@@ -1,7 +1,8 @@
+require 'rubygems'
+require 'signup'
+
 desc "put all the emails"
 task :email do
-  require 'rubygems'
-  require 'signup'
   puts "Emails"
   puts
   Signup.all.each do |email|
@@ -10,3 +11,7 @@ task :email do
 end
 
 task :default => :email
+
+task "email:count" do
+  puts "#{Signup.all.size} addresses"
+end
