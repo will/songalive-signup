@@ -4,8 +4,14 @@
   width: 400px;
 }
 
-input {
+.big {
   font: normal 40px Georgia Sans-Serif;
+}
+
+.prompt {
+  font: normal 40px Georgia Sans-Serif;
+  color: #ddd;
+  padding-left: 10px;
 }
 
 .text {

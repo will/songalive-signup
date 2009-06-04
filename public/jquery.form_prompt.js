@@ -98,5 +98,7 @@
 
 // our stuff
 $(document).ready(function() {
-  $('input#email').form_prompt(" email");
+  $('input#email').form_prompt(" email", {
+    className: 'prompt'
+   });
 })
