@@ -1,6 +1,7 @@
 require 'email_regex'
 require "dm-core"
 require "dm-timestamps"
+require "dm-validations"
 
 DataMapper.setup(:default, "sqlite3:///#{Dir.pwd}/emails.db")
 
@@ -10,6 +11,7 @@ class Signup
   property :id, Integer, :serial => true
   property :email, String, :key => true
   timestamps :at
+  validates_is_unique :email
   
   def self.signup(email)
     self.create(:email => email) if email =~ EmailAddress
