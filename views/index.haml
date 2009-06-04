@@ -1,5 +1,8 @@
 %h1 songalive
 
-%form{:action => '/', :method => :post}
-  %label{:for => "email"} email
-  %input{:title => "email", :name => "email"}
+- unless @thanks
+  = haml :signup, :layout => false
+- else
+  THANKS
+  
+= Signup.all.map{|e| e.email}.inspect
