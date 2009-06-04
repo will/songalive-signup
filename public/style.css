@@ -1,0 +1,14 @@
+.wide {
+  max-width: 400px;
+  min-width: 400px;
+  width: 400px;
+}
+
+input {
+  font: normal 40px Georgia Sans-Serif;
+}
+
+label {
+  display: block;
+  font-size: 25px;
+}

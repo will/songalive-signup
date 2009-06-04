@@ -4,7 +4,6 @@ require 'haml'
 
 require 'signup.rb'
 
-
 get '/' do
   haml :index
 end
