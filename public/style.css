@@ -8,7 +8,52 @@ input {
   font: normal 40px Georgia Sans-Serif;
 }
 
-label {
+.text {
   display: block;
-  font-size: 25px;
+  font-size: 20px;
+}
+
+
+html,body,#outermost {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+body {
+  text-align: center; /* IE/Win bug fix */
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  background-color: #FFF;
+}
+
+#outer {
+  height: 250px;
+  width: 550px;
+}
+/*
+Works in IE5+/Win, Firefox, Safari, Opera 5+, Netscape 6+, Konqueror 3 
+Does not work in NS4.x or IE/Mac
+*/
+.valignmid1 {
+  position: relative;
+  margin: 0 auto;
+}
+/* Opera 7.0x is buggy when you put display:table on <body> Opera 7.2+ and 6.x 
+   don't appear to have this problem. We hide this from IE5/Mac, because it 
+doesn't support display:table-cell and it doesn't have the same bug that allows
+this to work in IE5-6/Win (hide from IE/Mac) \*/
+.valignmid1 {
+  display: table;
+  vertical-align: middle;
+}
+/* Moz1.4 - Moz1.6 (NS7.1) bug, can't put position:relative on .valignmid2 \*/
+.valignmid2 {
+  width: 100%;
+  display: table-cell;
+  vertical-align: middle;
+}
+/* end hide */
+.valignmid3 {
+  position: relative;
+  background-color:#EEE;
 }
