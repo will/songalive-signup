@@ -12,11 +12,7 @@
         .valignmid1.valignmid3#outer
           .leftdiv
             %img{:src => 'logo.png'}
-            
-            - unless @thanks
-              = haml :signup, :layout => false
-            - else
-              .text Thank you
+            = yield
               
       /google analytics
       %script{:type => "text/javascript"}

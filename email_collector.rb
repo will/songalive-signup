@@ -5,16 +5,14 @@ require 'haml'
 require 'signup.rb'
 
 get '/' do
-  haml :index
+  haml :signup
 end
 
 post '/' do
   Signup.signup(params[:email])
-  
-  redirect '/thanks'
+	redirect '/thanks'
 end
 
 get '/thanks' do
-  @thanks = true
-  haml :index
+  haml :thanks
 end
