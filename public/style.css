@@ -15,6 +15,7 @@
 }
 
 .text {
+  color: #EEE;
   display: block;
   font-size: 20px;
 }
@@ -30,7 +31,7 @@ body {
   text-align: center; /* IE/Win bug fix */
   font-family: Verdana, Arial, Helvetica, sans-serif;
   background-color: #FFF;
-  background-image: url("stripe3.png");
+  background-image: url("stripe4.png");
 }
 
 #outer {
@@ -62,10 +63,10 @@ this to work in IE5-6/Win (hide from IE/Mac) \*/
 /* end hide */
 .valignmid3 {
   position: relative;
-  background-color:#EEE;
+  background-color:#000;
 }
 
 .leftdiv {
- border: 5px solid white;
+ border: 1px solid white;
  padding: 0 2em 2em 2em;
 }
