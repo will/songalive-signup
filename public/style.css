@@ -33,11 +33,6 @@ body {
   background-color: #FFF;
   background-image: url("stripe4.png");
 }
-
-#outer {
-/*  height: 250px;*/
-/*  width: 550px;*/
-}
 /*
 Works in IE5+/Win, Firefox, Safari, Opera 5+, Netscape 6+, Konqueror 3 
 Does not work in NS4.x or IE/Mac

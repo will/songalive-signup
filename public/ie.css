@@ -3,3 +3,7 @@
   color: #ddd;
   padding-left: 80px;
 }
+
+#outer {
+  width: 500px;
+}
