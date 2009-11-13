@@ -9,8 +9,11 @@ get '/' do
 end
 
 post '/' do
-  Signup.signup(params[:email])
-	redirect '/thanks'
+  if Signup.signup(params[:email])
+    redirect '/thanks'
+  else
+    redirect '/'
+  end
 end
 
 get '/thanks' do
