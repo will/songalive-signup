@@ -1,5 +1,7 @@
 %form{:action => '/', :method => :post}
-  %input.big.wide#email{:title => "email", :name => "email"}
+  %div
+    %input.big.wide#email{:title => "email", :name => "email"}
+  %input{:type => :submit, :value => "", :class => "signup_button"}
   %label.text{:for => "email"} 
     We'll let you know when we're in beta.
     %br

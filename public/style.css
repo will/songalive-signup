@@ -14,12 +14,21 @@
   padding-left: 10px;
 }
 
+.signup_button {
+  background: url("/button.png") no-repeat transparent;
+  height: 60px;
+  width:  400px;
+  border: 0px;
+  cursor: pointer;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
 .text {
   color: #EEE;
   display: block;
   font-size: 20px;
 }
-
 
 html,body,#outermost {
   height: 100%;
@@ -27,6 +36,7 @@ html,body,#outermost {
   margin: 0;
   padding: 0;
 }
+
 body {
   text-align: center; /* IE/Win bug fix */
   font-family: Verdana, Arial, Helvetica, sans-serif;
