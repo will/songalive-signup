@@ -15,7 +15,7 @@
 }
 
 .signup_button {
-  background: url("/button.png") no-repeat transparent;
+  background: url("/signup_button.png") no-repeat transparent;
   height: 60px;
   width:  400px;
   border: 0px;
