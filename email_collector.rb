@@ -19,13 +19,17 @@ post '/' do
 end
 
 get '/more' do
-  get_eamil
+  get_email
   haml :more
 end
 
 post '/more' do
   get_email
-
+  user = Signup.first(:email => @email)
+  user.why = params[:why]
+  user.contact = params[:contact]
+  user.save
+  redirect '/thanks'
 end
 
 get '/thanks' do

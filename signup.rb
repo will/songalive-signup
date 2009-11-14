@@ -10,6 +10,9 @@ class Signup
   
   property :id, Integer, :serial => true
   property :email, String, :key => true
+  property :why, Text
+  property :contact, Text
+
   timestamps :at
   validates_is_unique :email
   
