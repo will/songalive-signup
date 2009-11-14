@@ -1,0 +1,10 @@
+%form{:action => '/more', :method => :post}
+  %input{:type => :hidden, :name => :email, :value => @email}
+  %label.text{:for => "why"}
+    Why are you interested in merge.fm?
+  %textarea{:name => "why"}
+  %label.text{:for => "contact"}
+    Can our CEO contact you?
+  %textarea{:name => "contact"}
+  %div
+    %input{:type => :submit, :value => "", :class => "submit_button"}  

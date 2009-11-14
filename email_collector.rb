@@ -12,18 +12,27 @@ post '/' do
   @email = params[:email]
   if Signup.signup(@email)
     set_cookie("email", @email)
-    redirect '/thanks'
+    redirect '/more'
   else
     redirect '/'
   end
 end
 
 get '/more' do
-  @email = request.cookies['email']
-  redirect '/' unless @email
+  get_eamil
+  haml :more
 end
 
+post '/more' do
+  get_email
+
+end
 
 get '/thanks' do
   haml :thanks
+end
+
+def get_email
+  @email = request.cookies['email']
+  redirect '/' unless @email
 end

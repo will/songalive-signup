@@ -24,6 +24,24 @@
   margin-bottom: 1em;
 }
 
+.submit_button {
+  background: url("/submit_button.png") no-repeat transparent;
+  height: 60px;
+  width:  400px;
+  border: 0px;
+  cursor: pointer;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+textarea {
+  width: 400px;
+  height: 140px;
+  margin-top: 0.3em;
+  margin-bottom: 1em;
+  font: normal 20px Georgia Sans-Serif;
+}
+
 .text {
   color: #EEE;
   display: block;
