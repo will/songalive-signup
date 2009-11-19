@@ -6,3 +6,16 @@
     We'll let you know when we're in beta.
     %br
     We won't spam you.
+.player
+  %a#player{:href => "http://s3.amazonaws.com/mergefm-signup/mergeFM.m4v", :style => "display:block;width:640px;height:360px"}
+  .controls#controls
+  :javascript
+    $(document).ready(function(){ 
+    	flowplayer("player", "/flowplayer-3.1.5.swf", {
+    		clip: {
+    			autoPlay: false
+    		},
+    		plugins: {controls: null}
+    	}).controls("controls", {duration: 25});
+  
+    });

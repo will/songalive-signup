@@ -93,3 +93,127 @@ this to work in IE5-6/Win (hide from IE/Mac) \*/
  border: 1px solid white;
  padding: 0 2em 2em 2em;
 }
+
+
+/* root element should be positioned relatively so that 
+	child elements can be positioned absolutely */
+div.controls {
+	position:relative;
+	height:40px;
+	
+	/* black background with a gradient */
+	background:#000 url(/controls.png) repeat-x 0 -4px;
+	width:640px;
+}
+
+/* play/pause button */
+div.controls a.play, div.controls a.pause { 
+	position:absolute;
+	width: 46px;
+	height: 40px;
+	display:block;
+	text-indent:-9999em;
+	background:url(/controls.png) no-repeat 10px -61px;
+	cursor:pointer;
+	border-right:1px solid #000; 
+}
+
+div.controls a.play:hover {
+	background-position:10px -105px;	
+}
+
+/* pause state */
+div.controls a.pause { 
+	background-position:11px -148px;
+}
+
+div.controls a.pause:hover {
+	background-position:11px -192px;	
+}
+
+/* the timeline (or "scrubber")  */
+div.controls div.track {  
+	left:47px;
+	position:absolute;
+	cursor:pointer;
+	width:425px;
+	border-left:1px solid #999;
+	height:40px;	
+}
+
+/* the draggable playhead */
+div.controls div.playhead {
+	position:absolute;
+	cursor:pointer; 
+	background-color:#4ff;
+	opacity:0.3;
+	filter: alpha(opacity=30);	
+	width:3px;
+	height:40px;
+	border-right:1px solid #444;
+}
+
+/* buffer- and progress bars. upon runtime the width of these elements grows */
+div.controls div.progress, div.controls div.buffer {	
+	position:absolute;
+	background-color:#4ff;
+	filter: alpha(opacity=10);
+	opacity:0.1;
+	width:0px;
+	height:40px;
+}
+
+div.controls div.buffer {
+	background-color:#fff;
+	opacity:0.1;
+	filter: alpha(opacity=10);
+}
+
+/* time display */
+div.controls div.time {
+	position:absolute;		
+	width:129px;
+	left:470px;
+	padding:12px 0;
+	text-align:center;
+	border:1px solid #999;
+	border-width:0 1px;
+	
+	font-family:futura,"Lucida Grande","bitstream vera sans","trebuchet ms",verdana,arial;	
+	font-size:12px;
+	color:#fff; 
+}
+
+/* total duration in time display */
+div.controls div.time strong {
+	font-weight:normal;
+	color:#666;
+}
+
+/* mute / unmute buttons */
+div.controls a.mute, div.controls a.unmute {
+	position:absolute;
+	left:600px;
+	width:40px;
+	height:40px;
+	text-align:center;
+	padding:8px 0;
+	cursor:pointer;
+	text-indent:-9999em;
+	background:url(/controls.png) no-repeat 5px -323px;
+}
+
+div.controls a.mute:hover {
+	background-position:5px -367px;	
+}
+
+/* unmute state */
+div.controls a.unmute {
+	background-position:5px -235px;	
+}
+
+div.controls a.unmute:hover {
+	background-position:5px -279px;	
+}
+
+
