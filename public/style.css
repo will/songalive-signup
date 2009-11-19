@@ -15,6 +15,14 @@ input {
 
 #logovideo { 
   cursor: pointer;
+  margin-left: 8px;
+  width: 380px;
+  height: 263px;
+  background: url("logo_video.png") 0px -264px no-repeat;
+}
+
+#logovideo:hover{ 
+  background: url("logo_video.png") no-repeat;
 }
 
 .prompt {
