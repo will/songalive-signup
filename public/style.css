@@ -1,11 +1,20 @@
 .wide {
-  max-width: 400px;
-  min-width: 400px;
-  width: 400px;
+  max-width: 395px;
+  min-width: 395px;
+  width: 395px;
 }
 
 .big {
   font: normal 40px Georgia Sans-Serif;
+}
+
+input {
+  -webkit-border-radius: 15px;
+     -moz-border-radius: 15px;
+}
+
+#logovideo { 
+  cursor: pointer;
 }
 
 .prompt {
@@ -59,7 +68,8 @@ body {
   text-align: center; /* IE/Win bug fix */
   font-family: Verdana, Arial, Helvetica, sans-serif;
   background-color: #FFF;
-  background-image: url("stripe4.png");
+  background-image: url("stripe6.png");
+  background-repeat: repeat-x;
 }
 /*
 Works in IE5+/Win, Firefox, Safari, Opera 5+, Netscape 6+, Konqueror 3 
@@ -79,20 +89,50 @@ this to work in IE5-6/Win (hide from IE/Mac) \*/
 }
 /* Moz1.4 - Moz1.6 (NS7.1) bug, can't put position:relative on .valignmid2 \*/
 .valignmid2 {
-  width: 100%;
-  display: table-cell;
-  vertical-align: middle;
+  padding-top: 4em;
+
 }
 /* end hide */
 .valignmid3 {
   position: relative;
-  background-color:#000;
+  -moz-box-shadow: 1 0 90px 5px #000; 
+  -webkit-box-shadow: 0 20px 90px #000;
 }
 
 .leftdiv {
- border: 1px solid white;
+/* border: 1px solid white;*/
+ background: black;
  padding: 0 2em 2em 2em;
 }
+
+
+
+.playerbox {
+  background-image: url("transparent.png");
+  background-repeat: no-repeat;
+  width: 710px;
+  height: 456px;
+  padding-top: 50px;
+  padding-left: 50px;
+  display: none;
+  z-index:10000; 
+/*  -moz-box-shadow:0 0 90px 5px #000; 
+  -webkit-box-shadow: 0 0 90px #000;*/
+}
+
+.playerbox .close {
+  background-image:url(/close.png); 
+  position:absolute; 
+  right:25px; 
+  top:5px; 
+  cursor:pointer; 
+  height:35px; 
+  width:35px;
+}
+
+
+
+
 
 
 /* root element should be positioned relatively so that 
