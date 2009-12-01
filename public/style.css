@@ -15,7 +15,7 @@ input {
 
 #logovideo { 
   cursor: pointer;
-  margin-left: 11px;
+  margin-left: 69px;
   width: 380px;
   height: 263px;
   background: url("logo_video.png") 0px -264px no-repeat;
@@ -53,7 +53,7 @@ input {
 
 textarea {
   width: 400px;
-  height: 140px;
+  height: 100px;
   margin-top: 0.3em;
   margin-bottom: 1em;
   font: normal 20px Georgia Sans-Serif;
@@ -103,14 +103,16 @@ this to work in IE5-6/Win (hide from IE/Mac) \*/
 /* end hide */
 .valignmid3 {
   position: relative;
-  -moz-box-shadow: 1 0 90px 5px #000; 
-  -webkit-box-shadow: 0 20px 90px #000;
+/*  -moz-box-shadow: 1 0 90px 5px #000; 
+  -webkit-box-shadow: 0 20px 90px #000;*/
 }
 
 .leftdiv {
-/* border: 1px solid white;*/
- background: black;
- padding: 0 2em 2em 2em;
+  background-image: url("content_box.png");
+  background-repeat: no-repeat;
+  width: 516px;
+  height: 550px;
+/*  padding: 0em 2em 2em 2em;*/
 }
 
 
