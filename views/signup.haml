@@ -11,13 +11,36 @@
 
 
   :javascript
-    $(document).ready(function(){ 
-      flowplayer("player", "/flowplayer-3.1.5.swf", {
-        clip: {
-          autoPlay: false
-        },
-        plugins: {controls: null}
-      }).controls("controls", {duration: 25});
+    $(window).load(function(){
+        flowplayer("player", "/flowplayer-3.1.5.swf", {
+          clip: {
+            autoPlay: false
+          },
+
+          plugins: {
+             controls: {
+                progressGradient: 'medium',
+                borderRadius: '0px',
+                sliderColor: '#000000',
+                backgroundColor: '#222222',
+                tooltipColor: '#5F747C',
+                durationColor: '#ffffff',
+                progressColor: '#112233',
+                bufferColor: '#445566',
+                volumeSliderColor: '#000000',
+                timeColor: '#e09529',
+                buttonColor: '#e1972d',
+                tooltipTextColor: '#ffffff',
+                timeBgColor: '#555555',
+                volumeSliderGradient: 'none',
+                bufferGradient: 'none',
+                buttonOverColor: '#a67a3a',
+                sliderGradient: 'none',
+                backgroundGradient: [0.6,0.3,0,0,0],
+                height: 24,
+                opacity: 1.0
+             }
+          }        });//.controls("controls", {duration: 127});
      
-     $("div[rel]").overlay();
+       $("div[rel]").overlay();
     });
