@@ -12,9 +12,19 @@
 
   :javascript
     $(window).load(function(){
-        flowplayer("player", "/flowplayer-3.1.5.swf", {
+       var player = flowplayer("player", "/flowplayer-3.1.5.swf", {
           clip: {
-            autoPlay: false
+            autoPlay: false,
+             onStart: function(clip) { 
+                  pageTracker._trackEvent("Videos", "Play", clip.url); 
+              }, 
+              onPause: function(clip) { 
+                  pageTracker._trackEvent("Videos", "Pause", clip.url, parseInt(this.getTime())); 
+              }, 
+              onFinish: function(clip) { 
+                  pageTracker._trackEvent("Videos", "Finish", clip.url); 
+              } 
+
           },
           plugins: {
              controls: {
@@ -43,5 +53,7 @@
           }
         });
      
-       $("div[rel]").overlay();
+       $("div[rel]").overlay({
+          onLoad: function() { player.play() }
+       });
     });
