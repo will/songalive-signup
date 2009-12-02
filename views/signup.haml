@@ -12,7 +12,7 @@
 
   :javascript
     $(window).load(function(){
-       var player = flowplayer("player", "/flowplayer-3.1.5.swf", {
+       var player = flowplayer("player", {src: "/flowplayer-3.1.5.swf", wmode: 'transparent'}, {
           clip: {
             autoPlay: false,
              onStart: function(clip) { 

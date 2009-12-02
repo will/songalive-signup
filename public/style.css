@@ -125,7 +125,7 @@ this to work in IE5-6/Win (hide from IE/Mac) \*/
   padding-left: 34px;
   padding-top: 27px;
   display: none;
-  z-index:10000; 
+  z-index:1000; 
 /*  -moz-box-shadow:0 0 90px 5px #000; 
   -webkit-box-shadow: 0 0 90px #000;*/
 }
@@ -138,4 +138,5 @@ this to work in IE5-6/Win (hide from IE/Mac) \*/
   cursor:pointer; 
   height:35px; 
   width:35px;
+  z-index:2000; 
 }

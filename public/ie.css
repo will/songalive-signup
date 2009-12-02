@@ -7,3 +7,19 @@
 #outer {
   width: 500px;
 }
+
+.playerbox {
+  padding-left: 0px;
+}
+
+.playerbox .close {
+  right: 20px;
+}
+
+#logovideo {
+  margin-left: 0px;
+}
+
+.submit_button {
+  margin-top: 0px;
+}
