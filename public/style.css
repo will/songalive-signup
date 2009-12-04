@@ -32,16 +32,6 @@ input {
   z-index: 200;
 }
 
-.signup_button {
-  background: url("/submit.png") no-repeat transparent;
-  height: 60px;
-  width:  400px;
-  border: 0px;
-  cursor: pointer;
-  margin-top: 1em;
-  margin-bottom: 1em;
-}
-
 .submit_button {
   background: url("/submit.png") no-repeat transparent;
   height: 60px;
@@ -126,7 +116,7 @@ this to work in IE5-6/Win (hide from IE/Mac) \*/
   padding-left: 34px;
   padding-top: 27px;
   display: none;
-  z-index:1000; 
+  z-index:2000; 
 /*  -moz-box-shadow:0 0 90px 5px #000; 
   -webkit-box-shadow: 0 0 90px #000;*/
 }
@@ -139,5 +129,5 @@ this to work in IE5-6/Win (hide from IE/Mac) \*/
   cursor:pointer; 
   height:35px; 
   width:35px;
-  z-index:2000; 
+  z-index:3000; 
 }
