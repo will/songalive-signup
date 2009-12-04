@@ -29,6 +29,7 @@ input {
   font: normal 40px Georgia Sans-Serif;
   color: #ddd;
   padding-left: 10px;
+  z-index: 200;
 }
 
 .signup_button {
