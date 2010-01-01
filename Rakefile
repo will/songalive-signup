@@ -6,7 +6,7 @@ task :email do
   puts "Emails"
   puts
   Signup.all.each do |u|
-    puts "#{u.email}\t#{u.why}\t#{u.contact}"
+    puts "#{u.created_at.month}-#{u.created_at.day}-#{u.created_at.year}\t#{u.email}\t#{u.why}\t#{u.contact}"
   end
 end
 
