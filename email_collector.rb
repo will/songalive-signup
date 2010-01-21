@@ -45,3 +45,8 @@ def get_email
   @email = request.cookies['email']
   redirect '/' unless @email
 end
+
+helpers do
+  include Rack::Utils
+  alias_method :h, :escape_html
+end

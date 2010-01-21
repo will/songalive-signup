@@ -11,6 +11,6 @@
   - @signups.each do |signup|
     %tr
       %td= "#{signup.created_at.month}-#{signup.created_at.day}-#{signup.created_at.year}"
-      %td= signup.email
-      %td= signup.why
-      %td= signup.contact
+      %td=h signup.email
+      %td=h signup.why
+      %td=h signup.contact
