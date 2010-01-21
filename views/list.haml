@@ -1,0 +1,16 @@
+%style{:type => "text/css"}
+  :sass
+    .leftdiv
+      background: none
+%table
+  %tr
+    %th date
+    %th email
+    %th why
+    %th contact
+  - @signups.each do |signup|
+    %tr
+      %td= "#{signup.created_at.month}-#{signup.created_at.day}-#{signup.created_at.year}"
+      %td= signup.email
+      %td= signup.why
+      %td= signup.contact

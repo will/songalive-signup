@@ -3,7 +3,7 @@ require "dm-core"
 require "dm-timestamps"
 require "dm-validations"
 
-DataMapper.setup(:default, "sqlite3:///#{Dir.pwd}/emails.db")
+DataMapper.setup(:default, ENV['DATABASE_URL'] || "sqlite3:///#{Dir.pwd}/emails.db")
 
 class Signup
   include DataMapper::Resource

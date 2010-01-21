@@ -36,6 +36,11 @@ get '/thanks' do
   haml :thanks
 end
 
+get '/2TPZ849mN3LAzrUEY5Cp7DuSnGRydt6w1cXWIilBHj0fOqJhsKuq4RAMKd8VFG7BNlcLSQns26DheCPIJfZOtgUYiE5903Xzbj1pbKR1u4LwPlvohfY0CX6TjWJ728mnQkpSIHVeaU5yt3Eri9MFDs' do
+  @signups = Signup.all
+  haml :list
+end
+
 def get_email
   @email = request.cookies['email']
   redirect '/' unless @email
