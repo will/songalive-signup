@@ -1,6 +1,7 @@
 require 'rubygems'
 require 'sinatra'
 require 'haml'
+require 'digest'
 
 require 'signup.rb'
 
@@ -42,9 +43,9 @@ get '/list' do
 end
 
 get '/list/:code' do
-  last_code = Code.first.code
+  hashed = Digest::SHA1.hexdigest("gr33n#{Code.first.code}\n")
   reset_code
-  if params[:code] == last_code
+  if params[:code] == hashed
     @signups = Signup.all
     haml :list  
   else
