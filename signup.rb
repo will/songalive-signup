@@ -8,7 +8,7 @@ DataMapper.setup(:default, ENV['DATABASE_URL'] || "sqlite3:///#{Dir.pwd}/emails.
 class Signup
   include DataMapper::Resource
   
-  property :id, Integer, :serial => true
+  property :id, Serial
   property :email, String, :key => true
   property :why, Text
   property :contact, Text
@@ -22,3 +22,11 @@ class Signup
 end
 
 Signup.auto_upgrade!
+
+
+class Code
+  include DataMapper::Resource
+  property :code, Text, :key => true
+end
+
+Code.auto_upgrade!

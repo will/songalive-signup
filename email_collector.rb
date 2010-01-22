@@ -36,14 +36,32 @@ get '/thanks' do
   haml :thanks
 end
 
-get '/2TPZ849mN3LAzrUEY5Cp7DuSnGRydt6w1cXWIilBHj0fOqJhsKuq4RAMKd8VFG7BNlcLSQns26DheCPIJfZOtgUYiE5903Xzbj1pbKR1u4LwPlvohfY0CX6TjWJ728mnQkpSIHVeaU5yt3Eri9MFDs' do
-  @signups = Signup.all
-  haml :list
+get '/list' do
+  reset_code
+  haml :code
+end
+
+get '/list/:code' do
+  last_code = Code.first.code
+  reset_code
+  if params[:code] == last_code
+    @signups = Signup.all
+    haml :list  
+  else
+    redirect '/'
+  end
 end
 
 def get_email
   @email = request.cookies['email']
   redirect '/' unless @email
+end
+
+def reset_code
+  @code = Array.new(12) { ("A".."Z").to_a[rand(26)] }.join
+  stored_code = Code.first || Code.new
+  stored_code.code = @code
+  stored_code.save
 end
 
 helpers do

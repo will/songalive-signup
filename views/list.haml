@@ -8,7 +8,7 @@
     %th email
     %th why
     %th contact
-  - @signups.each do |signup|
+  - @signups.reverse.each do |signup|
     %tr
       %td= "#{signup.created_at.month}-#{signup.created_at.day}-#{signup.created_at.year}"
       %td=h signup.email
