@@ -1,3 +1,18 @@
+a {
+  text-decoration: none;
+  color: #EE9E00;
+  font-weight: bold;
+}
+
+a:visited {
+  color: #EE9E00;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 .wide {
   max-width: 395px;
   min-width: 395px;
